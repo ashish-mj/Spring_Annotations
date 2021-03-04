@@ -8,9 +8,9 @@ public class Controller {
 	public static void main(String[] args) {
 		System.out.println("Initializing Spring Container .....");
 		ApplicationContext ctx=new ClassPathXmlApplicationContext("Bean.xml");
-		Service service=
-				(Service)ctx.getBean("service");
-		System.out.println(service.creditService(100000));
+		AccountService service=
+				(AccountService) ctx.getBean("account");
+		System.out.println(service.creditService(50000));
 	
 }
 }
